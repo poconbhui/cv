@@ -1,0 +1,300 @@
+% cv.tex
+%
+% Based heavily on resume.tex by
+%   Jeremy B. R. Edberg <jedberg@gmail.com> http://www.jedberg.net
+%
+
+%%%%%%%%%%%%
+% Basic setup
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{setspace}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0in}
+\hyphenchar\font=-1
+\usepackage{geometry} 
+\geometry{a4paper, twoside} 
+\setstretch{1}
+\usepackage{booktabs}
+\usepackage{topcapt}
+%\raggedbottom
+%\raggedright
+\usepackage{tabulary}
+\usepackage{hyphenat}
+%%%%%%%%%%%%
+
+%%%%%%%%%%%%
+% PDF setup
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex]{hyperref}
+\else
+  \usepackage[hypertex]{hyperref}
+\fi
+\hypersetup{
+    letterpaper,
+    colorlinks,
+    urlcolor=black,
+    pdfpagemode=none,
+    pdftitle={Resume},
+    pdfauthor={Padraig O Conbhui},
+    pdfsubject={Resume},
+    pdfkeywords={HPC, high performance computing, web development, physics}
+}
+%%%%%%%%%%%%
+
+%%%%%%%%%%%%
+% Margin setup
+\oddsidemargin  -0.5in
+\evensidemargin -0.5in
+\textwidth      7.2in
+\headheight     -0.7in
+\topmargin      0.0in
+\textheight=10.7in
+%\footheight 1.0in 
+%%%%%%%%%%%%
+
+%%%%%%%%%%%%
+% Custom commands
+\newcommand{\fakeitem}{\hangindent=10pt\hangafter 1}
+%%%%%%%%%%%%
+
+\begin{document}
+
+%% Heading
+\begin{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
+    &\huge{\textbf{\sc{P\'{a}draig \'{O} Conbhu\'{\i}}}}&\\
+    poconbhui@gmail.com &  & Mobile: +353 85 1555234\\
+    \hline\hline
+\end{tabular*}
+\end{center}
+
+%% Experience Section
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+    \large {\sc {Experience}}\\
+    \hline
+\end{tabular*}
+
+% WebSummit
+\noindent 
+\\
+%\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{Dublin Web Summit Limited} & Dublin, Ireland \\
+    \emph{Technical Analyst} &
+        \emph{Summer 2012} \\
+\end{tabular*}
+{\small
+
+    \noindent
+    Responsible for evaluating new technologies for use in projects.
+    Built and maintained applications for internal and external use.
+    Analysed and fortified applications for higher user loads as necessary.
+
+    \begin{list}{$\bullet$}{
+    %\setlength{\itemsep}{ -5pt}
+    %\setlength{\partopsep}{ -18pt}
+    }
+        \item Developed browser based app leveraging Facebook's
+              JavaScript API to find users attending a Facebook event
+              and list them in order of mutual friends, displaying those
+              mutual friends, and showing which of those were also
+              attending the event. This was tested against an event of
+              about 3000 attendees.
+
+        \item Analyzed ticketing system used for event, identifying features
+              causing the system to perform very poorly when the userbase
+              passed a certain size.
+
+        \item Implemented caching and set up CDN properly for event site
+              when it began to start crashing under high load.
+
+        \item Researched NoSQL database systems, primarily CouchDB, Neo4j
+              and MongoDB for use in apps being built in house.
+
+    \end{list}
+}
+
+
+% LULI
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{LULI, Ecole Polytechnique} & Palaiseau, France \\
+    \emph{Intern} & \emph{Summer 2011}
+\end{tabular*}
+{\small
+    \noindent
+    Investigated alignment errors found in experiments using an
+    ellipsoidal plasma mirror.
+
+    \begin{list}{$\bullet$}{
+    %\setlength{\itemsep}{ -5pt}
+    %\setlength{\partopsep}{ -18pt}
+    }
+        \item Set up computer simulation of experimental setup using
+              Zemax optics software.
+
+        \item Investigated alignment errors due to geometric effects
+              by using ray tracing techniques, and comparing them
+              to diffractive errors by using physical optics propagation.
+
+        \item Set up a physical optics bench to attempt to reproduce the
+              errors, and play about with the system.
+    \end{list}
+}
+
+
+%% Education and Training
+\noindent
+\\
+\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+    \large {\sc {Education \& Training}}\\
+    \hline
+\end{tabular*}
+
+%University Of Edinburgh
+\noindent 
+\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{University Of Edinburgh} & \\
+    \emph{MSc, High Performance Computing} & \emph{2012 to 2013}
+\end{tabular*}
+{\small
+
+    \noindent
+    Course centered around building high performance applications,
+    primarily through parallelization, and through deep understanding
+    of the underlying architecture of a given system.
+    It also included modules on software engineering techniques, so
+    while highly performant code was being written, they were in the form
+    of maintainable projects using best practice coding techniques.
+
+    \noindent
+    \begin{description}
+        \item{\bf Subjects:} Message Passing Programming, Threaded Programming,
+                  Programming Skills, Parallel Numerical Algorithms,
+                  Parallel Programming Languages, HPC Architectures,
+                  HPC Ecosystems, Performance Programming,
+                  Software Development, Advanced Parallel Programming,
+                  Parallel Design Patterns.
+    \end{description}
+}
+
+%Trinity College, Dublin
+\noindent 
+\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{Trinity College, Dublin} & \\
+    \emph{BA Mod, Theoretical Physics} & \emph{2008 to 2012} \\
+    \emph{Grade: 2.1}
+\end{tabular*}
+{\small
+
+    \noindent
+    Primary goal of the course was to teach problem solving and
+    analytical thinking, along with the tools necessary to break down
+    and understand complex problems.
+    Joint effort by both the School of Maths and the School of Physics,
+    this course offered training as both a mathematician and a
+    physicist.
+    Training aimed primarily towards understanding condensed matter
+    physics from the physics side, and quantum field theory and general
+    relativity from the maths side.
+    Completed a dissertation on accelerating particle physics calculations
+    on GPUs using CUDA C.
+
+    \noindent
+    \begin{description}
+        \item{\bf Subjects:} Computer Simulation, GPU Programming,
+                      Classical Mechanics, Quantum Mechanics,
+                      Classical Field Theory, Quantum Field Theory,
+                      Special Relativity, General Relativity,
+                      Classical Statistical Mechanics,
+                      Quantum Statistical Mechanics,
+                      Condensed Matter Physics, Spectroscopy,
+                      Optics, Electromagnetism, Thermodynamics,
+                      Electronics, Chaos and Complexity,
+                      Linear Algebra, Analysis,
+                      Topology.
+    \end{description}
+    
+}
+
+
+%Colaiste Eoin
+\noindent 
+\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{Colaiste Eoin} & \\
+    \emph{Leaving Certificate} & \emph{2002 to 2008} \\
+    \emph{Grade: 9 Honours - 570/600 points}
+\end{tabular*}
+{\small
+
+    \noindent
+    \begin{description}
+        \item{\bf Subjects:} Math, Applied Math,
+                             Physics, Chemistry,
+                             Geology, English,
+                             Irish, Latin,
+                             French.
+    \end{description}
+}
+
+
+\pagebreak{}
+
+%% Skills
+\noindent
+\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+    \large {\sc {Skills}}\\
+    \hline
+\end{tabular*}
+
+
+%Software Development
+\noindent 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{Software Development}
+\end{tabular*}
+{\small
+
+    \noindent
+    Many projects, both personal and course related, and in a wide variety
+    of languages, completed to date.
+    Particularly interested in web development, including
+    server/client-side programs, and the intersection of
+    both, and building ``scalable'' web applications.
+    Great interest in high performance programming.
+
+    \begin{description}
+        \item{\bf Languages:} \\
+            Bash, C, C\verb!++!, CUDA C, Fortran 90, \\
+            Mathematica, Zemax, \\
+            HTML/CSS, Javascript, jQuery, \\
+            Ruby On Rails, Node.js, PHP, \\
+            SQL, CouchDB, MongoDB, Neo4j \\
+    \end{description}
+}
+
+
+%Problem Solving
+\noindent 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{Problem Solving}
+\end{tabular*}
+{\small
+
+    \noindent
+    Training in Theoretical Physics fostered a strong ability to
+    analyse complex problems and devise and implement solutions to them.
+    Training in High Performance Computing encouraged the application
+    of these skills to creating highly performant code to solve
+    a given problem.
+}
+
+\end{document}
