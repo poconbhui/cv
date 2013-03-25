@@ -4,8 +4,9 @@
 %   Jeremy B. R. Edberg <jedberg@gmail.com> http://www.jedberg.net
 %
 
-%%%%%%%%%%%%
-% Basic setup
+%%%%%%%%%%%%%%%
+% Basic setup %
+%%%%%%%%%%%%%%%
 \documentclass[11pt]{article}
 \usepackage{fullpage}
 \usepackage{setspace}
@@ -21,10 +22,11 @@
 %\raggedright
 \usepackage{tabulary}
 \usepackage{hyphenat}
-%%%%%%%%%%%%
 
-%%%%%%%%%%%%
-% PDF setup
+
+%%%%%%%%%%%%%
+% PDF setup %
+%%%%%%%%%%%%%
 \usepackage{ifpdf}
 \ifpdf
   \usepackage[pdftex]{hyperref}
@@ -41,10 +43,11 @@
     pdfsubject={Resume},
     pdfkeywords={HPC, high performance computing, web development, physics}
 }
-%%%%%%%%%%%%
 
-%%%%%%%%%%%%
-% Margin setup
+
+%%%%%%%%%%%%%%%%
+% Margin setup %
+%%%%%%%%%%%%%%%%
 \oddsidemargin  -0.5in
 \evensidemargin -0.5in
 \textwidth       7.2in
@@ -52,17 +55,19 @@
 \topmargin       0.0in
 \textheight=     10.7in
 %\footheight     1.0in 
-%%%%%%%%%%%%
 
-%%%%%%%%%%%%
-% Style setup
+
+%%%%%%%%%%%%%%%
+% Style setup %
+%%%%%%%%%%%%%%%
 %\setlength{\parindent}{0pt}
 %\setlength{\parskip}{\baselineskip}
 \usepackage{parskip}
-%%%%%%%%%%%%
 
-%%%%%%%%%%%%
-% Custom commands
+
+%%%%%%%%%%%%%%%%%%%
+% Custom commands %
+%%%%%%%%%%%%%%%%%%%
 \newcommand{\resumeSection}[1]{
     \par
     \vspace{\baselineskip}
@@ -93,30 +98,45 @@
     \end{small}
     \par
 }
-%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%
+% Begin Document %
+%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-%% Heading
+
+%%%%%%%%%%%%%
+%% Heading %%
+%%%%%%%%%%%%%
 \begin{center}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
-    &\huge{\textbf{\sc{P\'{a}draig \'{O} Conbhu\'{\i}}}}&\\
+
+    &{ \huge \textbf \sc P\'{a}draig \'{O} Conbhu\'{\i} }&\\ % Padraig O Conbhui
     poconbhui@gmail.com &  & Mobile: +353 85 1555234\\
     \hline\hline
+
 \end{tabular*}
 \end{center}
 
 
-%% Experience Section
+%%%%%%%%%%%%%%%%
+%% Experience %%
+%%%%%%%%%%%%%%%%
 \resumeSection{Experience}
 
 
+%
 % WebSummit
+%
 \begin{resumeSubSectionHeader}
+
     \textbf{Dublin Web Summit Limited} & Dublin, Ireland \\
-    \emph{Technical Analyst} & \emph{Summer 2012}
+    \emph{Technical Analyst}           & \emph{Summer 2012}
+
 \end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
+
     Responsible for evaluating new technologies for use in projects.
     Built and maintained applications for internal and external use.
     Analysed and modified applications to handle  higher user loads
@@ -148,14 +168,21 @@
             and NoSQL database systems for use with apps being built in
             house.
     \end{itemize}
+
 \end{resumeSubSectionBody}
 
+
+%
 % LULI
+%
 \begin{resumeSubSectionHeader}
+
     \textbf{LULI, Ecole Polytechnique} & Palaiseau, France \\
-    \emph{Intern} & \emph{Summer 2011}
+    \emph{Intern}                      & \emph{Summer 2011}
+
 \end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
+
     Investigated alignment errors found in experiments which used an
     ellipsoidal plasma mirror.
 
@@ -173,20 +200,28 @@
             Set up a physical optics bench to attempt to reproduce the
             errors, and play about with the system.
     \end{itemize}
+
 \end{resumeSubSectionBody}
 
 
-%% Education and Training
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Education and Training %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resumeSection{Education \& Training}
 
 
-%University Of Edinburgh
+%
+% University Of Edinburgh
+%
 \begin{resumeSubSectionHeader}
-    \textbf{University Of Edinburgh} & Edinburgh, Scotland\\
+
+    \textbf{University Of Edinburgh}       & Edinburgh, Scotland\\
     \emph{MSc, High Performance Computing} & \emph{2012 to 2013} \\
     \emph{Grade: N/A (In Progress)}
+
 \end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
+
     Course centered around building high performance applications,
     primarily through parallelization, and through deep understanding
     of the underlying architecture of a given system and language.
@@ -200,15 +235,22 @@
             Software Development, Advanced Parallel Programming,
             Parallel Design Patterns.
     \end{description}
+
 \end{resumeSubSectionBody}
 
-%Trinity College, Dublin
+
+%
+% Trinity College, Dublin
+%
 \begin{resumeSubSectionHeader}
-    \textbf{Trinity College, Dublin} & Dublin, Ireland\\
+
+    \textbf{Trinity College, Dublin}   & Dublin, Ireland\\
     \emph{BA Mod, Theoretical Physics} & \emph{2008 to 2012} \\
     \emph{Grade: 2.1}
+
 \end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
+
     Course taught problem solving and analytical thinking, providing
     tools necessary to break down and understand complex problems,
     primarily in the fields of Mathematics and Physics.
@@ -234,15 +276,22 @@
             Linear Algebra, Analysis,
             Topology.
     \end{description}
+
 \end{resumeSubSectionBody}
 
-%Colaiste Eoin
+
+%
+% Colaiste Eoin
+%
 \begin{resumeSubSectionHeader}
-    \textbf{Colaiste Eoin} & Dublin, Ireland\\
+
+    \textbf{Colaiste Eoin}     & Dublin, Ireland\\
     \emph{Leaving Certificate} & \emph{2002 to 2008} \\
     \emph{Grade: 9 Honours - 570/600 points}
+
 \end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
+
     Secondary level education done entirely through the Irish language.
     School focused on promotion of the Irish language by requiring Irish
     be spoken by students during school time and by encouraging
@@ -257,18 +306,26 @@
             Irish, Latin,
             French.
     \end{description}
+
 \end{resumeSubSectionBody}
 
 
-%% Skills
+%%%%%%%%%%%%
+%% Skills %%
+%%%%%%%%%%%%
 \resumeSection{Skills}
 
 
-%Software Development
+%
+% Software Development
+%
 \begin{resumeSubSectionHeader}
+
     \textbf{Software Development}
+
 \end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
+
     Many projects, both personal and course related, and in a wide variety
     of languages, completed to date.
     Interested in web development, specifically in building highly
@@ -287,29 +344,43 @@
             Bash, C, C\verb!++!, Fortran 90, \\
             MPI, OpenMP, Cuda C, UPC, Coarray Fortran, \\
             Mathematica, Zemax, Gnuplot, LaTeX, \\
-            HTML/CSS, JavaScript, jQuery, PHP, Ruby, \\
-            Ruby On Rails, Node.js, \\
+            HTML/CSS, JavaScript, CoffeeScript, PHP, Ruby, \\
+            Ruby On Rails, Node.js, jQuery, \\
             SQL, CouchDB, MongoDB, Neo4j
     \end{description}
+
 \end{resumeSubSectionBody}
 
-%Problem Solving
+
+%
+% Problem Solving
+%
 \begin{resumeSubSectionHeader}
+
     \textbf{Problem Solving}
+
 \end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
+
     Training in Theoretical Physics fostered a strong ability to
     analyse complex problems and devise and implement solutions to them.
     Training in High Performance Computing encouraged the application
     of these skills to creating highly performant code to solve
     problems.
+
 \end{resumeSubSectionBody}
 
-%Awards
+
+%
+% Awards
+%
 \begin{resumeSubSectionHeader}
+
     \textbf{Awards}
+
 \end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
+
     \begin{itemize}
         \item
             Included on TCD Dean of Students' Roll of Honour 2011.
@@ -330,6 +401,7 @@
         \item
             Won battle of the bands, Col\'aiste Eoin, 2008.
     \end{itemize}
+
 \end{resumeSubSectionBody}
 
 \end{document}
