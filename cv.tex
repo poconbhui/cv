@@ -35,7 +35,7 @@
     letterpaper,
     colorlinks,
     urlcolor=black,
-    pdfpagemode=none,
+    %pdfpagemode=none,
     pdftitle={Resume},
     pdfauthor={Padraig O Conbhui},
     pdfsubject={Resume},
@@ -47,16 +47,52 @@
 % Margin setup
 \oddsidemargin  -0.5in
 \evensidemargin -0.5in
-\textwidth      7.2in
+\textwidth       7.2in
 \headheight     -0.7in
-\topmargin      0.0in
-\textheight=10.7in
-%\footheight 1.0in 
+\topmargin       0.0in
+\textheight=     10.7in
+%\footheight     1.0in 
+%%%%%%%%%%%%
+
+%%%%%%%%%%%%
+% Style setup
+%\setlength{\parindent}{0pt}
+%\setlength{\parskip}{\baselineskip}
+\usepackage{parskip}
 %%%%%%%%%%%%
 
 %%%%%%%%%%%%
 % Custom commands
-\newcommand{\fakeitem}{\hangindent=10pt\hangafter 1}
+\newcommand{\resumeSection}[1]{
+    \par
+    \vspace{\baselineskip}
+    \large {\sc {#1}}
+    \par
+    \vspace{-0.9\baselineskip}
+    \hrulefill
+    \vspace{0.5\baselineskip}
+    \par
+}
+
+\newenvironment{resumeSubSectionHeader}{
+    \par
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \par
+} {
+    \end{tabular*}
+    \par
+}
+
+\newenvironment{resumeSubSectionBody}{
+    \par
+    \vspace{-0.8\parskip}
+    \begin{small}
+    \par
+} {
+    \par
+    \end{small}
+    \par
+}
 %%%%%%%%%%%%
 
 \begin{document}
@@ -70,234 +106,230 @@
 \end{tabular*}
 \end{center}
 
+
 %% Experience Section
-\noindent
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
-    \large {\sc {Experience}}\\
-    \hline
-\end{tabular*}
+\resumeSection{Experience}
+
 
 % WebSummit
-\noindent 
-\\
-%\\
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\begin{resumeSubSectionHeader}
     \textbf{Dublin Web Summit Limited} & Dublin, Ireland \\
-    \emph{Technical Analyst} &
-        \emph{Summer 2012} \\
-\end{tabular*}
-{\small
-
-    \noindent
+    \emph{Technical Analyst} & \emph{Summer 2012}
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
     Responsible for evaluating new technologies for use in projects.
     Built and maintained applications for internal and external use.
-    Analysed and fortified applications for higher user loads as necessary.
+    Analysed and modified applications to handle  higher user loads
+    as necessary.
 
-    \begin{list}{$\bullet$}{
-    %\setlength{\itemsep}{ -5pt}
-    %\setlength{\partopsep}{ -18pt}
-    }
-        \item Developed browser based app leveraging Facebook's
-              JavaScript API to find users attending a Facebook event
-              and list them in order of mutual friends, displaying those
-              mutual friends, and showing which of those were also
-              attending the event. This was tested against an event of
-              about 3000 attendees.
+    \begin{itemize}
+        \item
+            Developed browser based app leveraging Facebook's
+            JavaScript API to find users attending a Facebook event
+            and list them in order of mutual friends with the current user,
+            displaying those mutual friends, and showing which of them
+            were also attending the event.
+            This was tested against an event of about 3000 attendees and
+            loaded results in several seconds.
 
-        \item Analyzed ticketing system used for event, identifying features
-              causing the system to perform very poorly when the userbase
-              passed a certain size.
+        \item
+            Analyzed ticketing system used for event, identified features
+            causing the system to slow to an unacceptible pace when the
+            userbase passed a certain size and suggested alternative
+            approaches.
 
-        \item Implemented caching and set up CDN properly for event site
-              when it began to start crashing under high load.
+        \item
+            Implemented caching and distribution of comtent through a CDN
+            for the main site when hosting servers began straining under
+            high traffic.
 
-        \item Researched NoSQL database systems, primarily CouchDB, Neo4j
-              and MongoDB for use in apps being built in house.
-
-    \end{list}
-}
-
+        \item
+            Researched IaaS platforms, deplaoyments in cloud environments
+            and NoSQL database systems for use with apps being built in
+            house.
+    \end{itemize}
+\end{resumeSubSectionBody}
 
 % LULI
-\noindent
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\begin{resumeSubSectionHeader}
     \textbf{LULI, Ecole Polytechnique} & Palaiseau, France \\
     \emph{Intern} & \emph{Summer 2011}
-\end{tabular*}
-{\small
-    \noindent
-    Investigated alignment errors found in experiments using an
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+    Investigated alignment errors found in experiments which used an
     ellipsoidal plasma mirror.
 
-    \begin{list}{$\bullet$}{
-    %\setlength{\itemsep}{ -5pt}
-    %\setlength{\partopsep}{ -18pt}
-    }
-        \item Set up computer simulation of experimental setup using
-              Zemax optics software.
+    \begin{itemize}
+        \item
+            Set up computer simulation of experimental setup using
+            Zemax optics software.
 
-        \item Investigated alignment errors due to geometric effects
-              by using ray tracing techniques, and comparing them
-              to diffractive errors by using physical optics propagation.
+        \item
+            Investigated alignment errors due to geometric effects
+            using ray tracing models, and compared them
+            to diffractive errors by using wavefront propagation models.
 
-        \item Set up a physical optics bench to attempt to reproduce the
-              errors, and play about with the system.
-    \end{list}
-}
+        \item
+            Set up a physical optics bench to attempt to reproduce the
+            errors, and play about with the system.
+    \end{itemize}
+\end{resumeSubSectionBody}
 
 
 %% Education and Training
-\noindent
-\\
-\\
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
-    \large {\sc {Education \& Training}}\\
-    \hline
-\end{tabular*}
+\resumeSection{Education \& Training}
+
 
 %University Of Edinburgh
-\noindent 
-\\
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{University Of Edinburgh} & \\
-    \emph{MSc, High Performance Computing} & \emph{2012 to 2013}
-\end{tabular*}
-{\small
-
-    \noindent
+\begin{resumeSubSectionHeader}
+    \textbf{University Of Edinburgh} & Edinburgh, Scotland\\
+    \emph{MSc, High Performance Computing} & \emph{2012 to 2013} \\
+    \emph{Grade: N/A (In Progress)}
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
     Course centered around building high performance applications,
     primarily through parallelization, and through deep understanding
-    of the underlying architecture of a given system.
-    It also included modules on software engineering techniques, so
-    while highly performant code was being written, they were in the form
-    of maintainable projects using best practice coding techniques.
+    of the underlying architecture of a given system and language.
 
-    \noindent
     \begin{description}
-        \item{\bf Subjects:} Message Passing Programming, Threaded Programming,
-                  Programming Skills, Parallel Numerical Algorithms,
-                  Parallel Programming Languages, HPC Architectures,
-                  HPC Ecosystems, Performance Programming,
-                  Software Development, Advanced Parallel Programming,
-                  Parallel Design Patterns.
+        \item{\bf Subjects:}
+            Message Passing Programming, Threaded Programming,
+            Parallel Numerical Algorithms,
+            Parallel Programming Languages, HPC Architectures,
+            HPC Ecosystems, Performance Programming,
+            Software Development, Advanced Parallel Programming,
+            Parallel Design Patterns.
     \end{description}
-}
+\end{resumeSubSectionBody}
 
 %Trinity College, Dublin
-\noindent 
-\\
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{Trinity College, Dublin} & \\
+\begin{resumeSubSectionHeader}
+    \textbf{Trinity College, Dublin} & Dublin, Ireland\\
     \emph{BA Mod, Theoretical Physics} & \emph{2008 to 2012} \\
     \emph{Grade: 2.1}
-\end{tabular*}
-{\small
-
-    \noindent
-    Primary goal of the course was to teach problem solving and
-    analytical thinking, along with the tools necessary to break down
-    and understand complex problems.
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+    Course taught problem solving and analytical thinking, providing
+    tools necessary to break down and understand complex problems,
+    primarily in the fields of Mathematics and Physics.
     Joint effort by both the School of Maths and the School of Physics,
     this course offered training as both a mathematician and a
     physicist.
     Training aimed primarily towards understanding condensed matter
     physics from the physics side, and quantum field theory and general
     relativity from the maths side.
-    Completed a dissertation on accelerating particle physics calculations
+    Completed a dissertation on performing particle physics calculations
     on GPUs using CUDA C.
 
-    \noindent
     \begin{description}
-        \item{\bf Subjects:} Computer Simulation, GPU Programming,
-                      Classical Mechanics, Quantum Mechanics,
-                      Classical Field Theory, Quantum Field Theory,
-                      Special Relativity, General Relativity,
-                      Classical Statistical Mechanics,
-                      Quantum Statistical Mechanics,
-                      Condensed Matter Physics, Spectroscopy,
-                      Optics, Electromagnetism, Thermodynamics,
-                      Electronics, Chaos and Complexity,
-                      Linear Algebra, Analysis,
-                      Topology.
+        \item{\bf Subjects:}
+            Computer Simulation, GPU Programming,
+            Classical Mechanics, Quantum Mechanics,
+            Classical Field Theory, Quantum Field Theory,
+            Special Relativity, General Relativity,
+            Classical Statistical Mechanics, Quantum Statistical Mechanics,
+            Condensed Matter Physics, Spectroscopy,
+            Optics, Electromagnetism, Thermodynamics,
+            Electronics, Chaos and Complexity,
+            Linear Algebra, Analysis,
+            Topology.
     \end{description}
-    
-}
-
+\end{resumeSubSectionBody}
 
 %Colaiste Eoin
-\noindent 
-\\
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{Colaiste Eoin} & \\
+\begin{resumeSubSectionHeader}
+    \textbf{Colaiste Eoin} & Dublin, Ireland\\
     \emph{Leaving Certificate} & \emph{2002 to 2008} \\
     \emph{Grade: 9 Honours - 570/600 points}
-\end{tabular*}
-{\small
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+    Secondary level education done entirely through the Irish language.
+    School focused on promotion of the Irish language by requiring Irish
+    be spoken by students during school time and by encouraging
+    extracurricular activities such as debating through Irish, Irish music
+    and Irish sports.
 
-    \noindent
     \begin{description}
-        \item{\bf Subjects:} Math, Applied Math,
-                             Physics, Chemistry,
-                             Geology, English,
-                             Irish, Latin,
-                             French.
+        \item{\bf Subjects:}
+            Math, Applied Math,
+            Physics, Chemistry,
+            Geology, English,
+            Irish, Latin,
+            French.
     \end{description}
-}
+\end{resumeSubSectionBody}
 
-
-\pagebreak{}
 
 %% Skills
-\noindent
-\\
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
-    \large {\sc {Skills}}\\
-    \hline
-\end{tabular*}
+\resumeSection{Skills}
 
 
 %Software Development
-\noindent 
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\begin{resumeSubSectionHeader}
     \textbf{Software Development}
-\end{tabular*}
-{\small
-
-    \noindent
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
     Many projects, both personal and course related, and in a wide variety
     of languages, completed to date.
-    Particularly interested in web development, including
-    server/client-side programs, and the intersection of
-    both, and building ``scalable'' web applications.
+    Interested in web development, specifically in building highly
+    scalable web applications.
     Great interest in high performance programming.
-    Keep up to date with current programming techniques and paradigms.
-    Employ Test Driven Development when possible to ensure programs work as
-    expected.
+    Like to keep up to date with popular programming techniques and paradigms
+    whenever possible.
+    Employ Test Driven Development when possible as building reliable systems
+    is also an interest.
+
+    Languages and frameworks listed either used extensively in coursework
+    or in professional projects.
 
     \begin{description}
         \item{\bf Languages:} \\
-            Bash, C, C\verb!++!, CUDA C, Fortran 90, \\
-            Mathematica, Zemax, \\
-            HTML/CSS, Javascript, jQuery, \\
-            Ruby On Rails, Node.js, PHP, \\
-            SQL, CouchDB, MongoDB, Neo4j \\
+            Bash, C, C\verb!++!, Fortran 90, \\
+            MPI, OpenMP, Cuda C, UPC, Coarray Fortran, \\
+            Mathematica, Zemax, Gnuplot, LaTeX, \\
+            HTML/CSS, JavaScript, jQuery, PHP, Ruby, \\
+            Ruby On Rails, Node.js, \\
+            SQL, CouchDB, MongoDB, Neo4j
     \end{description}
-}
-
+\end{resumeSubSectionBody}
 
 %Problem Solving
-\noindent 
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\begin{resumeSubSectionHeader}
     \textbf{Problem Solving}
-\end{tabular*}
-{\small
-
-    \noindent
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
     Training in Theoretical Physics fostered a strong ability to
     analyse complex problems and devise and implement solutions to them.
     Training in High Performance Computing encouraged the application
     of these skills to creating highly performant code to solve
-    a given problem.
-}
+    problems.
+\end{resumeSubSectionBody}
+
+%Awards
+\begin{resumeSubSectionHeader}
+    \textbf{Awards}
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+    \begin{itemize}
+        \item
+            Included on TCD Dean of Students' Roll of Honour 2011.
+
+        \item
+            Awarded an Entrance Exhibition to Trinity College Dublin
+            based on outstanding achievement in Leaving Certificate
+            examination.
+
+        \item
+            Received full college scholarship "Scol\'aireacht Neamhteoranta"
+            for outstanding results in Irish language exams in the
+            Leaving Certificate.
+
+        \item
+            Several book prizes for results for result in Christmas exams.
+
+        \item
+            Won battle of the bands, Col\'aiste Eoin, 2008.
+    \end{itemize}
+\end{resumeSubSectionBody}
 
 \end{document}
