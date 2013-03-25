@@ -1,6 +1,5 @@
 CV for Pádraig Ó Conbhuí
 ------------------------
-------------------------
 
 To build the CV, run `make` in the directory.
 
