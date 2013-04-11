@@ -1,4 +1,5 @@
 cv.pdf: cv.tex
+	pdflatex cv.tex && \
 	pdflatex cv.tex
 
 .PHONY: clean
