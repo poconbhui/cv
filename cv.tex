@@ -7,9 +7,13 @@
 %   Jeremy B. R. Edberg <jedberg@gmail.com> http://www.jedberg.net
 %
 
-%%%%%%%%%%%%%%%
-% Basic setup %
-%%%%%%%%%%%%%%%
+
+%****************************************************************************%
+
+
+%
+% Basic setup
+%
 \documentclass[11pt]{article}
 \usepackage{fullpage}
 \usepackage{setspace}
@@ -27,9 +31,12 @@
 \usepackage{hyphenat}
 
 
-%%%%%%%%%%%%%
-% PDF setup %
-%%%%%%%%%%%%%
+%*****************************************************************************%
+
+
+%
+% PDF setup
+%
 \usepackage{ifpdf}
 \ifpdf
   \usepackage[pdftex]{hyperref}
@@ -48,9 +55,12 @@
 }
 
 
-%%%%%%%%%%%%%%%%
-% Margin setup %
-%%%%%%%%%%%%%%%%
+%*****************************************************************************%
+
+
+%
+% Margin setup
+%
 \oddsidemargin  -0.5in
 \evensidemargin -0.5in
 \textwidth       7.2in
@@ -60,17 +70,23 @@
 %\footheight     1.0in 
 
 
-%%%%%%%%%%%%%%%
-% Style setup %
-%%%%%%%%%%%%%%%
+%*****************************************************************************%
+
+
+%
+% Style setup
+%
 %\setlength{\parindent}{0pt}
 %\setlength{\parskip}{\baselineskip}
 \usepackage{parskip}
 
 
-%%%%%%%%%%%%%%%%%%%
-% Custom commands %
-%%%%%%%%%%%%%%%%%%%
+%*****************************************************************************%
+
+
+%
+% Custom commands
+%
 \newcommand{\resumeSection}[1]{
     \par
     \vspace{\baselineskip}
@@ -103,15 +119,18 @@
 }
 
 
-%%%%%%%%%%%%%%%%%%
-% Begin Document %
-%%%%%%%%%%%%%%%%%%
+%*****************************************************************************%
+
+
 \begin{document}
 
 
-%%%%%%%%%%%%%
-%% Heading %%
-%%%%%%%%%%%%%
+%*****************************************************************************%
+
+
+%
+% Heading
+%
 \begin{center}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
 
@@ -123,9 +142,9 @@
 \end{center}
 
 
-%%%%%%%%%%%%%%%%
-%% Experience %%
-%%%%%%%%%%%%%%%%
+%*****************************************************************************%
+
+
 \resumeSection{Experience}
 
 
@@ -207,9 +226,9 @@
 \end{resumeSubSectionBody}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Education and Training %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*****************************************************************************%
+
+
 \resumeSection{Education \& Training}
 
 
@@ -313,9 +332,9 @@
 \end{resumeSubSectionBody}
 
 
-%%%%%%%%%%%%
-%% Skills %%
-%%%%%%%%%%%%
+%*****************************************************************************%
+
+
 \resumeSection{Skills}
 
 
@@ -427,5 +446,9 @@
     \end{itemize}
 
 \end{resumeSubSectionBody}
+
+
+%*****************************************************************************%
+
 
 \end{document}
