@@ -41,7 +41,7 @@
 %
 \usepackage{ifpdf}
 \ifpdf
-  \usepackage[pdftex]{hyperref}
+  \usepackage[pdftex,bookmarks=true]{hyperref}
 \else
   \usepackage[hypertex]{hyperref}
 \fi
@@ -93,12 +93,13 @@
     \par
     \vspace{-0.9\baselineskip}
     \hrulefill
-    \vspace{0.5\baselineskip}
+    \vspace{0.25\baselineskip}
     \par
 }
 
 \newenvironment{resumeSubSectionHeader}{
     \par
+    %\vspace{-0.15\baselineskip}
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \par
 } {
@@ -108,13 +109,27 @@
 
 \newenvironment{resumeSubSectionBody}{
     \par
-    \vspace{-0.8\parskip}
+    \vspace{-0.2\parskip}
     \begin{small}
     \par
 } {
     \par
     \end{small}
     \par
+}
+
+\newenvironment{resumeItemize}{
+    \vspace{-0.5\baselineskip}
+    \begin{itemize}
+} {
+    \end{itemize}
+}
+
+\newenvironment{resumeDescription}{
+    \vspace{-0.5\baselineskip}
+    \begin{description}
+} {
+    \end{description}
 }
 
 
@@ -131,18 +146,59 @@
 % Heading
 %
 \begin{center}
-    { \huge \textbf \sc P\'adraig \'O Conbhu\'\i }
-
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
+    { \huge \textbf \sc P\'adraig \'O Conbhu\'\i } \\
     poconbhui@gmail.com
-    & &
-    Mobile:
-        +44 7598 421229
-    \\
-    \hline\hline
-\end{tabular*}
 \end{center}
-\vspace{\baselineskip}
+
+
+%*****************************************************************************%
+
+
+\resumeSection{Software Development}
+
+
+%
+% Software Development
+%
+\begin{resumeSubSectionBody}
+
+    My preferred language is C\verb!++!, and my preferred application domain is
+    anything I haven't done yet.
+    Ideally, something that's never been done.
+    I have a great interest in high performance computing, computational
+    physics, and build systems.
+    I like to keep up to date with modern programming techniques and paradigms
+    whenever possible.
+
+    All the technologies listed here I have used extensively in personal
+    projects, or in a professional context.
+
+    \begin{resumeDescription}
+        \item{\bf Expertise:} \\
+            % Languages
+            Bash, C, C\verb!++!, Fortran 90, Python,
+            \\
+            MPI, OpenMP, CUDA C/C\verb!++!, CUDA Fortran,
+            OpenACC, UPC, Coarray Fortran,
+            \\
+            % Compilers & build tools
+            CMake, Autotools, GCC, Clang, MSVC, PGI, ELF/Mach-O linkers \& loaders,
+            \\
+            % Libraries
+            SWIG, FEniCS, CGAL, VTK, ParaView,
+            Mathematica, MATLAB, Zemax, Gnuplot, LaTeX,
+            \\
+            PulseAudio, GStreamer, SBC, Bluetooth,
+            \\
+            % Web stuff
+            HTML/CSS, JavaScript, PHP, Ruby,
+            Ruby On Rails, Node.js, jQuery,
+            \\
+            % Databases
+            SQL, CouchDB, MongoDB, Redis, Neo4j
+    \end{resumeDescription}
+
+\end{resumeSubSectionBody}
 
 
 %*****************************************************************************%
@@ -152,57 +208,168 @@
 
 
 %
+% Irish Centre for High-End Computing
+%
+
+\begin{resumeSubSectionHeader}
+
+    \textbf{Irish Centre for High-End Computing (ICHEC)} & Dublin, Ireland \\
+    \emph{Acting Oil \& Gas Programme Manager} & \emph{2018 - Present}
+
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+
+    Leading a research software engineering team of 9 post-docs with 1 PhD
+    student with a focus on the oil \& gas domain,
+    leading a long-term consultancy oil \& gas team of 5,
+    and founded \& leading a consultancy Financial software optimization team of
+    3.
+    Lead and executed several bespoke AI performance optimization projects for
+    Irish SMEs.
+
+    \begin{resumeItemize}
+        \item
+            Managed the smooth transition of the duties and consultancy
+            development work of departing Oil \& Gas Programme Manager to myself
+            and the current consultancy oil \& gas team with limited disruption
+            to our clients. Expanded and still expanding our capability and
+            capacity to service oil \& gas clients.
+
+        \item
+            Founded a consultancy financial software optimization team. Won a
+            highly competitive contract (competing with 4 other UK-based HPC
+            consultancy firms) with a large financial software company for a
+            (now completed) proof-of-concept consultancy optimization project.
+            Further work with the client expected to begin in the next few
+            months.
+
+        \item
+            Overseeing and contributing to the transition of the ExSeisDat
+            project to its second phase focusing on hardware-level I/O
+            optimization and exascale storage systems, securing ICHEC's
+            partnerships with LERO and DDN to the end of the current funding
+            cycle.
+
+        \item
+            Lead and contributed to an AI optimization \& predictive performance modelling project
+            in the Machine Translation domain.
+
+        \item
+            Assessing and implementing internal policies and procedures to
+            foster and develop critical skills and experience for our
+            computational scientists.
+
+        \item
+            Developing best-practice guidelines, FAQs, and teaching material for
+            software development within the centre.
+
+        \item
+            Developing capability within ICHEC to develop and present Nvidia GPU
+            training material and workshops.
+            Mentoring in Nvidia-sponsored OpenACC hackathons.
+    \end{resumeItemize}
+\end{resumeSubSectionBody}
+
+\begin{resumeSubSectionHeader}
+
+    \textbf{Irish Centre for High-End Computing (ICHEC)} & Dublin, Ireland \\
+    \emph{Computational Scientist}                 & \emph{2017 - 2018}
+
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+
+    Contributed to the development of academic and enterprise software,
+    primarily in the context of oil \& gas.
+    Ported and optimized software for clients to leverage GPU accelerators,
+    primarily for AI codes.
+
+    \begin{resumeItemize}
+        \item
+            Contributed to the ExSeisDat library, focusing on parallel I/O
+            and I/O optimization for oil \& gas data formats and workflows.
+            Introduced a number of common best-practices, including using CMake,
+            eliminating compiler warnings, using static analysis, automatic code
+            formatting, and continuous integration using multiple compilers and
+            dependency versions / implementations.
+
+        \item
+            Contributed to the development of consultancy oil \& gas software.
+
+        \item
+            Ported an oil \& gas code (Kirchhoff Depth Migration) to run on
+            Microsoft Azure cloud platform, leveraging Nvidia GPU acceleration
+            for a multi-national oil \& gas company.
+
+        \item
+            Analyzed and ported AI software stack in the Natural Language
+            Processing domain to leverage GPU acceleration for Opening.io.
+
+        \item
+            Participated in numerous workshops (primarily with PRACE), further
+            developing skills in high performance C\verb!++!, parallel I/O,
+            seismic data processing, FPGA programming, performance analysis
+            tools, and modern parallel programming models for exascale systems.
+
+        \item
+            Received professional certification as Certified Scrum Master (CSM)
+            from Scrum Alliance.
+    \end{resumeItemize}
+
+\end{resumeSubSectionBody}
+
+
+%
 % University Of Edinburgh
 %
 \begin{resumeSubSectionHeader}
 
     \textbf{University Of Edinburgh}   & Edinburgh, Scotland \\
-    \emph{PhD Student}                 & \emph{2013 - Present}
+    \emph{PhD Student}                 & \emph{2013 - 2017}
 
 \end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
 
     Investigated numerical techniques for understanding how rocks record
     changes in the earth's magnetic field. This was done primarily through
-    the lens of micromagnetic modelling.
+    the lens of micromagnetic modelling, using high-performance finite element
+    analysis, C\verb!++! and Fortran.
 
-    \begin{itemize}
+    \begin{resumeItemize}
         \item
-            Developed a meshing program, MEshRRILL, using the CGAL library to
-            generate tetrahedralized geometries of interest to us. This included
-            simple polyhedra like cubes and truncated octahedra, but also
-            realistic grain geometries reconstructed from FIB slice and view
-            data. Meshes and surface reconstructions generated by this
-            software have been used in publications.
+            Developed theory and computational techniques for including
+            magnetostrictive effects in non-uniformly-magnetized 3d
+            finite-element micromagnetic models with free boundaries.
+            This was implemented in our group's micromagnetics code, MERRILL,
+            with results presented at conferences, and published in a thesis.
 
         \item
-            Developed software to produce simulated electron holography data
-            from our micromagnetic models. This allowed us to directly compare
-            experimental and simulation data for a given magnetic grain. This
-            was wrapped up as a ParaView plugin and has been optimized to
-            produce holography results in near real-time.
+            Developed a meshing application, MEshRRILL, leveraging the CGAL
+            library to generate unstructured meshes for micromagnetic
+            simulations.
+            The application generates a number of pre-defined shapes, typical
+            for ferromagnetic crystals, but also generates reconstructions of
+            geometries from tomography images.
             Data generated by this software has been used in publications.
 
         \item
-            Developed a computational technique for including magnetostrictive
-            effects in micromagnetic models with free boundaries.
-            The differential equations described by the problem are solved
-            using the Finite Element Method, using the FEniCS environment
-            to transform the equations into a matrix problem, and
-            PETSc or Eigen to solve them.
-            This was included in our group's serial micromagnetics code, MERRILL,
-            and is compatible with our parallel code, DUNLOP.
+            Developed software, HoloMag, to produce simulated electron
+            holography data from our micromagnetic models.
+            This is provided as a ParaView plugin and has been optimized to
+            produce holography results in near real-time, allowing researchers
+            to develop an intuition for how 3d magnetizations effect the 2d
+            holography images.
+            Data generated by this software has been used in publications.
 
         \item
-            Developed workflows for compiling and distributing software so
-            it could be reliably distributed as a standalone folder. This
-            included static versions of programs like MERRILL, but also
-            a shared version of MEshRRILL with dependencies installed in a
-            subfolder, so it could easily be used as a C++ library to
-            define complex geometries. The holography software was also compiled
-            to work out of the box with a given ParaView binary downloaded
-            from their website.
-    \end{itemize}
+            Developed workflows for compiling software for reliable distribution.
+            This included building as-static-as-possible versions of programs like MERRILL,
+            along with shared-library version of MEshRRILL with all dependencies
+            installed in a subfolder and RPATHs set appropriately, so it could
+            easily be used and linked as a C++ library to mesh complex
+            user-defined geometries.
+            HoloMag was also compiled to be ABI-compatible with ParaView
+            binaries downloaded from the ParaView website.
+    \end{resumeItemize}
 
 \end{resumeSubSectionBody}
 
@@ -222,15 +389,12 @@
     Analyzed and modified applications to handle higher user loads
     as necessary.
 
-    \begin{itemize}
+    \begin{resumeItemize}
         \item
-            Developed browser based app leveraging Facebook's
-            JavaScript API and FBQL to find users attending a Facebook event
-            and list them in order of mutual friends with the current user,
-            displaying those mutual friends, and showing which of them
-            were also attending the event.
-            This was tested against an event of about 3000 attendees and
-            loaded results in several seconds.
+            Developed browser based app leveraging Facebook's JavaScript API and
+            FBQL API to display a user's mutual friends with attendees of an
+            event.
+            Handled events with thousands of attendees within seconds.
 
         \item
             Analyzed ticketing system used for event, identified features
@@ -239,15 +403,15 @@
 
         \item
             Implemented caching and distribution of content through a CDN
-            for the main site when hosting servers began straining under
+            for events sites when hosting servers began straining under
             high traffic.
 
         \item
             Researched and made recommendations on IaaS platforms,
             deployments in cloud environments
-            and NoSQL database systems for use with apps being built in
-            house.
-    \end{itemize}
+            and NoSQL database systems for use with apps and services being
+            developed in-house.
+    \end{resumeItemize}
 
 \end{resumeSubSectionBody}
 
@@ -257,33 +421,37 @@
 %
 \begin{resumeSubSectionHeader}
 
-    \textbf{LULI, Ecole Polytechnique} & Palaiseau, France \\
+    \textbf{LULI, \'Ecole Polytechnique} & Palaiseau, France \\
     \emph{Intern}                      & \emph{Summer 2011}
 
 \end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
 
-    Investigated alignment errors found in experiments which used an
-    ellipsoidal plasma mirror (EPM).
+    Investigated alignment errors encountered by experiments using
+    ellipsoidal plasma mirrors (EPM) for focusing lasers.
 
-    \begin{itemize}
+    \begin{resumeItemize}
         \item
-            Developed numerical model of an experimental setup testing
-            an EPM using the Zemax optics software.
-
-        \item
-            Set up an equivalent physical model of the experimental setup
-            using a Helium-Neon laser in a lab.
+            Participated in a laser-plasma ion acceleration experiment.
 
         \item
-            Investigated alignment errors numerically due to geometric effects
-            using ray tracing models, and compared them
-            to diffractive errors by using wave front propagation models.
+            Developed numerical model of an experimental setup probing EPM
+            alignment errors using the Zemax optics software.
 
         \item
-            Investigated alignment errors physically by playing with the
-            lab setup.
-    \end{itemize}
+            Investigated alignment errors due to geometric effects using ray
+            tracing models, and compared them to diffractive errors by using
+            wave front propagation models.
+
+        \item
+            Set up an equivalent physical model of the experimental setup using
+            a Helium-Neon laser to experimentally replicate the predictions of
+            the model.
+
+        \item
+            Demonstrated the classes of alignment errors the EPM was and was not
+            sensitive to, informing alignment procedures in future experiments.
+    \end{resumeItemize}
 
 \end{resumeSubSectionBody}
 
@@ -291,55 +459,8 @@
 %*****************************************************************************%
 
 
-\resumeSection{Software Development}
-
-
-%
-% Software Development
-%
-\begin{resumeSubSectionBody}
-
-    My preferred language is C\verb!++!, and my preferred application domain is
-    anything I haven't done yet.
-    Ideally, something that's never been done.
-    I have a great interest in high performance programming and computational
-    physics.
-    I like to keep up to date with popular programming techniques and paradigms
-    whenever possible.
-    The technologies listed here are ones I would be happy to claim some
-    expertise in.
-
-    \begin{description}
-        \item{\bf Projects:} \\
-            \href{https://github.com/poconbhui}{github.com/poconbhui} \\
-            \href{https://bitbucket.org/poconbhui}{bitbucket.org/poconbhui}
-
-        \item{\bf Technologies used:} \\
-            % Languages
-            Bash, C, C\verb!++!, Fortran 90, Python,
-            MPI, OpenMP, Cuda C, UPC, Coarray Fortran,
-            \\
-            % Libraries
-            SWIG, FEniCS, CGAL, VTK, ParaView,
-            Mathematica, MATLAB, Zemax, Gnuplot, LaTeX,
-            \\
-            PulseAudio, GStreamer, SBC, Bluetooth,
-            \\
-            % Web stuff
-            HTML/CSS, JavaScript, PHP, Ruby,
-            Ruby On Rails, Node.js, jQuery,
-            \\
-            % Databases
-            SQL, CouchDB, MongoDB, Redis, Neo4j
-    \end{description}
-
-\end{resumeSubSectionBody}
-
-
-%*****************************************************************************%
-
-
-\resumeSection{Education \& Training}
+\pagebreak
+\resumeSection{Formal Education \& Training}
 
 
 %
@@ -348,21 +469,37 @@
 \begin{resumeSubSectionHeader}
 
     \textbf{University Of Edinburgh}       & Edinburgh, Scotland \\
-    \emph{MSc, High Performance Computing} & \emph{2012 to 2013} \\
-    \emph{Grade: MSc With Distinction}
+    \emph{PhD, Geophysics} & \emph{2013 to 2017} \\
+
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+    Trained as a researcher in Geophysics,
+    primarily in computational paleomagnetism.
+    \begin{resumeDescription}
+        \item{
+            {\bf Thesis:}
+            \it Micromagnetic Modelling of Imperfect Crystals
+        } \\
+        Developed the theory needed to simulate non-uniformly-magnetized,
+        multi-phase, ferromagnetic crystals including magnetostriction and
+        crystal defects, with free boundary conditions.
+        Presented implementations and results.
+    \end{resumeDescription}
+\end{resumeSubSectionBody}
+
+\begin{resumeSubSectionHeader}
+
+    \textbf{University Of Edinburgh}       & Edinburgh, Scotland \\
+    \emph{MSc, High Performance Computing -- With Distinction} & \emph{2012 to 2013}
 
 \end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
 
     The course centred around building high performance applications,
-    primarily through parallelisation, and through deep understanding
+    primarily through parallelism, and through deep understanding
     of the underlying architecture of a given system and language.
-    I completed a dissertation comparing replicated data and systolic loop
-    implementations for a molecular dynamics code, and presented a new
-    hybrid replicated systolic implementation with impressive scaling
-    properties.
 
-    \begin{description}
+    \begin{resumeDescription}
         \item{\bf Subjects:}
             Message Passing Programming, Threaded Programming,
             Parallel Numerical Algorithms,
@@ -370,7 +507,15 @@
             HPC Ecosystems, Performance Programming,
             Software Development, Advanced Parallel Programming,
             Parallel Design Patterns.
-    \end{description}
+
+        \item{
+            {\bf Dissertation:}
+            \it Towards Exascale Molecular Dynamics
+        } \\
+            Compared replicated data and systolic loop schemes for
+            molecular dynamics simulations, and presented a novel hybrid
+            replicated systolic scheme with impressive scaling properties.
+    \end{resumeDescription}
 
 \end{resumeSubSectionBody}
 
@@ -381,26 +526,15 @@
 \begin{resumeSubSectionHeader}
 
     \textbf{Trinity College, Dublin}   & Dublin, Ireland     \\
-    \emph{BA Mod, Theoretical Physics} & \emph{2008 to 2012} \\
-    \emph{Grade: 2.1}
+    \emph{BA Mod, Theoretical Physics -- II-1} & \emph{2008 to 2012}
 
 \end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
 
-    The course taught problem solving and analytical thinking, providing
-    tools necessary to break down and understand complex problems,
-    primarily in the fields of Mathematics and Physics.
-    A joint effort by both the School of Maths and the School of Physics,
-    this course offered training as both a mathematician and a
-    physicist.
-    This training aimed primarily towards understanding condensed matter
-    physics from the physics side, and quantum field theory and general
-    relativity from the maths side, and included experimental labs,
-    as required for IOP certification.
-    I completed a dissertation in the final year on performing particle
-    physics calculations (Lattice QCD) on GPUs using CUDA C.
+    The course taught practical problem solving skills and analytical thinking
+    in the fields of Mathematics and Physics.
 
-    \begin{description}
+    \begin{resumeDescription}
         \item{\bf Subjects:}
             Computer Simulation, GPU Programming,
             Experimental Labs,
@@ -413,7 +547,19 @@
             Electronics, Chaos and Complexity,
             Linear Algebra, Analysis,
             Topology.
-    \end{description}
+
+        \item{
+            {\bf Dissertation:}
+            \it Computing Two Point Correlators For A Lattice QCD Theory On
+            Graphics Processing Units
+        } \\
+            Wrote complex-valued matrix multiplications routines in CUDA C which
+            beat cuBLAS (at the time) by 20\%.
+            Re-cast the full set of matrix multiply-traces needed to compute the
+            correlator matrix into a large matrix-matrix multiplication,
+            providing up to 20x performance improvement over independent
+            multiply-trace operations.
+    \end{resumeDescription}
 
 \end{resumeSubSectionBody}
 
@@ -423,73 +569,90 @@
 %*****************************************************************************%
 
 
-\resumeSection{Awards}
-
-
-%
-% Awards
-%
-\begin{resumeSubSectionBody}
-
-    \begin{itemize}
-        \setlength\itemsep{0em}
-        \setlength\parskip{0em}
-        \item
-            % TODO: Find out actual name of this.
-            Winner Castle Meeting 2016 Outstanding Participation.
-
-        \item
-            Creer Fund recipient 2016.
-
-        \item
-            Winner Geosciences PGR Conference 2013 Best Presentation.
-
-        \item
-            Included on TCD Dean of Students' Roll of Honour 2011.
-
-        \item
-            Three TCD book prizes for achieving 1st class honors grade in
-            years 1-3.
-
-        \item
-            Awarded an Entrance Exhibition to Trinity College Dublin
-            based on outstanding achievement in Leaving Certificate
-            examination.
-
-        \item
-            Received full college scholarship ``Scol\'aireacht Neamhteoranta''
-            for outstanding results in Irish language exams in the
-            Leaving Certificate.
-
-        \item
-            Won battle of the bands, Col\'aiste Eoin, 2008 as singer and bassist
-            of heavy metal band Capulus. \\
-            (Demo available upon request)
-
-        %\item
-        %    I think Paddy is a pretty cool guy.
-        %    Eh codes warez and doesn't afraid of anything.
-    \end{itemize}
-
-\end{resumeSubSectionBody}
+% \resumeSection{Awards}
+% 
+% 
+% %
+% % Awards
+% %
+% \begin{resumeSubSectionBody}
+% 
+%     \begin{resumeItemize}
+%         \setlength\itemsep{0em}
+%         \setlength\parskip{0em}
+%         \item
+%             % TODO: Find out actual name of this.
+%             Winner Castle Meeting 2016 Outstanding Participation.
+% 
+%         \item
+%             Creer Fund recipient 2016.
+% 
+%         \item
+%             Winner Geosciences PGR Conference 2013 Best Presentation.
+% 
+%         \item
+%             Included on TCD Dean of Students' Roll of Honour 2011.
+% 
+%         \item
+%             Three TCD book prizes for achieving 1st class honors grade in
+%             years 1-3.
+% 
+%         \item
+%             Awarded an Entrance Exhibition to Trinity College Dublin
+%             based on outstanding achievement in Leaving Certificate
+%             examination.
+% 
+%         \item
+%             Received full college scholarship ``Scol\'aireacht Neamhteoranta''
+%             for outstanding results in Irish language exams in the
+%             Leaving Certificate.
+% 
+%         \item
+%             Won battle of the bands, Col\'aiste Eoin, 2008 as singer and bassist
+%             of heavy metal band Capulus. \\
+%             (Demo available upon request)
+% 
+%         %\item
+%         %    I think Paddy is a pretty cool guy.
+%         %    Eh codes warez and doesn't afraid of anything.
+%     \end{resumeItemize}
+% 
+% \end{resumeSubSectionBody}
 
 
 
 %*****************************************************************************%
 
 
-\resumeSection{Publications \& Collaborations}
+\resumeSection{Publications}
 
 
 %
 % Published
 %
-\begin{resumeSubSectionHeader}
-
-    \textbf{Published}
-
-\end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
+
+    Fisher, M. A., Conbhuí, P. Ó., ... {\&} Short, R. (2018). ExSeisDat: A set of parallel I/O and
+    workflow libraries for petroleum seismology. Oil {\&} Gas Science and
+    Technology–Revue d’IFP Energies nouvelles, 73, 74.
+
+    Ó Conbhuí, P. (2018). Micromagnetic modelling of imperfect crystals, PhD
+    Thesis, University of Edinburgh.
+
+    Conbhuí, P. Ó., Williams, W., Fabian, K., Ridley, P., Nagy, L., {\&}
+    Muxworthy, A. R. (2018). MERRILL: Micromagnetic earth related robust
+    interpreted language laboratory. Geochemistry, Geophysics, Geosystems,
+    19(4), 1080-1106.
+
+    Valdez-Grijalva, M. A., Muxworthy, A. R., Williams, W., Conbhuí, P. Ó.,
+    Nagy, L., Roberts, A. P., {\&} Heslop, D. (2018). Magnetic vortex effects on
+    first-order reversal curve (FORC) diagrams for greigite dispersions. Earth
+    and Planetary Science Letters, 501, 103-111.
+
+    Nagy, L., Williams, W., Muxworthy, A. R., Fabian, K., Almeida, T. P.,
+    Conbhuí, P. Ó., {\&} Shcherbakov, V. P. (2017). Stability of equidimensional
+    pseudo–single-domain magnetite over billion-year timescales. Proceedings of
+    the National Academy of Sciences, 114(39), 10356-10360.
 
     Almeida, T. P., Muxworthy, A. R., Kov\'acs, A., Williams, W., Nagy, L.,
     Conbhu\'i, P. \'O., ... {\&} Dunin-Borkowski, R. E. (2016). Direct
@@ -509,135 +672,6 @@
     studies. Microscopy and Microanalysis, 21(S3), 2261-2262.
 
 \end{resumeSubSectionBody}
-
-
-%
-% Under Review
-%
-\begin{resumeSubSectionHeader}
-
-    \textbf{Under Review}
-
-\end{resumeSubSectionHeader}
-\begin{resumeSubSectionBody}
-
-    Nagy, L., Williams, W., Muxworthy, A. R., Fabian, K., Almeida, T. P.,
-    Conbhu\'i, P. \'O., Shcherbakov, V. P. (2017). Numerical modelling shows
-    that non-uniformly magnetised particles retain billion-year palaeomagnetic
-    recordings. Nature Communications (Under Review).
-
-\end{resumeSubSectionBody}
-
-
-%
-% In Preparation
-%
-\begin{resumeSubSectionHeader}
-
-    \textbf{In Preparation}
-
-\end{resumeSubSectionHeader}
-\begin{resumeSubSectionBody}
-
-    \begin{description}
-        \item{
-            MERRILL: Micromagnetic Earth Related Robust Interpreted Language
-            Laboratory
-        }\\
-        An overview of the MERRILL program and a brief tutorial on its uses.
-
-        \item{DUNLOP: Distributed $\mu$magnetic Numerical Lem OPtimizer}\\
-            An introduction to the highly parallel C\verb!++!/Python code we've
-            used in Edinburgh for micromagnetic modelling of huge grains.
-
-        \item{The Effect of Magnetosriction on Magnetic Remanence in TM60}\\
-            An overview of how magnetostriction effects TM60 for a number of
-            boundary conditions and stresses.
-
-        \item{
-            HoloMag: Electron Holography Simulation with Reference Magnetic
-            Structures
-        }\\
-            An introduction to the HoloMag software and some examples of
-            simulated remanent states, e.g. uniform, vortex, flower, for a
-            number of geometries, e.g. sphere, cube, octahedron, and the
-            electron holograms they produce at various angles.
-            In addition, a general guide to interpreting electron holograms and
-            potential pitfalls.
-
-        \item{
-            Theoretical Blocking Temperatures of Iron Spheres with Non-Uniform
-            Remanence States
-        }\\
-            Results from MERRILL's action minimization showing the relationship
-            for blocking temperature vs. size in iron spheres.
-
-        \item{
-            Evolution of Domain Structures in Magnetite from Single Domain to
-            Multi Domain
-        }\\
-            Results on size hysteresis simulations using DUNLOP from small SD
-            grains up to large proto-MD grains.
-
-    \end{description}
-
-\end{resumeSubSectionBody}
-
-
-%
-% Collaboration
-%
-\begin{resumeSubSectionHeader}
-
-    \textbf{Collaborations}
-
-\end{resumeSubSectionHeader}
-\begin{resumeSubSectionBody}
-
-    I enjoy collaborating with others with skills very different to my own.
-    Particularly when I can build or provide tools or knowledge that can make
-    their work easier or more accurate.
-    The collaborators here are friends or groups with a number of friends that
-    I've had the pleasure of meeting at various national and international
-    conferences, and I enjoy working with towards shared goals.
-
-    \begin{description}
-
-        \item{\bf Wyn Williams, Karl Fabian}
-
-            Development of the script based micromagnetic modelling program,
-            MERRILL, including support for growing community of users.
-            Derivation and development of full treatment of magnetostriction in
-            micromagnetic codes.
-
-        \item{\bf NanoPaleoMagnetism (Cambridge)}
-
-            Development of geometry surface reconstructions for FIB based series of
-            nanotomography images in meteoritic samples.
-            Modelling of realistic grains from geometry reconstructions.
-
-        \item{\bf Natural Magnetism Group (Imperial College London)}
-
-            Development of interactive (real-time) holography simulation tools to
-            aid analysis and interpretation of experimental data and comparison of
-            experimental observations and equivalent computer model.
-
-        \item{\bf Ann Hirt (ETH Z\"urich)}
-
-            Developing models for interacting clusters of nano particles using
-            MERRILL.
-
-        \item{\bf Various}
-
-            Supporting and strengthening the community of scientists using MERRILL
-            in paleomagnetism, materials science, biomagnetism and environmental
-            magnetism.
-            Developing tools to replicate physical systems {\it in-silico}.
-
-    \end{description}
-
-\end{resumeSubSectionBody}
-
 
 
 %*****************************************************************************%
