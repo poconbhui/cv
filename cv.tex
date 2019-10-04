@@ -23,8 +23,8 @@
 \setlength{\tabcolsep}{0in}
 \hyphenchar\font=-1
 
-\usepackage{geometry} 
-\geometry{a4paper, twoside} 
+\usepackage{geometry}
+\geometry{a4paper, twoside}
 \setstretch{1}
 
 \usepackage{booktabs}
@@ -176,13 +176,14 @@
     \begin{resumeDescription}
         \item{\bf Expertise:} \\
             % Languages
-            Bash, C, C\verb!++!, Fortran 90, Python,
+            C\verb!++!, C, Fortran 90, Python, Bash,
             \\
-            MPI, OpenMP, CUDA C/C\verb!++!, CUDA Fortran,
+            MPI, MPI-IO, OpenMP, CUDA C/C\verb!++!, CUDA Fortran,
             OpenACC, UPC, Coarray Fortran,
             \\
             % Compilers & build tools
-            CMake, Autotools, GCC, Clang, MSVC, PGI, ELF/Mach-O linkers \& loaders,
+            CMake, Autotools, GCC, Clang, MSVC, PGI,
+            Linux \& macOS ELF / Mach-O toolchains,
             \\
             % Libraries
             SWIG, FEniCS, CGAL, VTK, ParaView,
@@ -221,8 +222,8 @@
 
     Leading a research software engineering team of 9 post-docs with 1 PhD
     student with a focus on the oil \& gas domain,
-    leading a long-term consultancy oil \& gas team of 5,
-    and founded \& leading a consultancy Financial software optimization team of
+    leading a consultancy oil \& gas team of 5,
+    and founded \& leading a consultancy financial software optimization team of
     3.
     Lead and executed several bespoke AI performance optimization projects for
     Irish SMEs.
@@ -232,16 +233,16 @@
             Managed the smooth transition of the duties and consultancy
             development work of departing Oil \& Gas Programme Manager to myself
             and the current consultancy oil \& gas team with limited disruption
-            to our clients. Expanded and still expanding our capability and
-            capacity to service oil \& gas clients.
+            to our clients. Expanded our capability and capacity to service oil
+            \& gas clients.
 
         \item
             Founded a consultancy financial software optimization team. Won a
             highly competitive contract (competing with 4 other UK-based HPC
             consultancy firms) with a large financial software company for a
-            (now completed) proof-of-concept consultancy optimization project.
-            Further work with the client expected to begin in the next few
-            months.
+            (now completed) proof-of-concept consultancy GPU optimization
+            project.
+            Further work with the client expected to begin in Q4 2019.
 
         \item
             Overseeing and contributing to the transition of the ExSeisDat
@@ -249,15 +250,20 @@
             optimization and exascale storage systems, securing ICHEC's
             partnerships with LERO and DDN to the end of the current funding
             cycle.
+            Leveraging the project to boot-strap a research performance
+            engineering team in the centre.
 
         \item
-            Lead and contributed to an AI optimization \& predictive performance modelling project
-            in the Machine Translation domain.
+            Lead and contributed to an AI optimization \& predictive
+            performance modelling project in the Machine Translation domain for
+            an Irish SME using Nvidia GPUs on Microsoft Azure.
 
         \item
             Assessing and implementing internal policies and procedures to
             foster and develop critical skills and experience for our
             computational scientists.
+            Contributing to development of scalable organizational structures in
+            the centre to allow for the centre to expand.
 
         \item
             Developing best-practice guidelines, FAQs, and teaching material for
@@ -281,14 +287,15 @@
     Contributed to the development of academic and enterprise software,
     primarily in the context of oil \& gas.
     Ported and optimized software for clients to leverage GPU accelerators,
-    primarily for AI codes.
+    primarily for AI applications.
 
     \begin{resumeItemize}
         \item
             Contributed to the ExSeisDat library, focusing on parallel I/O
             and I/O optimization for oil \& gas data formats and workflows.
-            Introduced a number of common best-practices, including using CMake,
-            eliminating compiler warnings, using static analysis, automatic code
+            Introduced a number of common best-practices, including but not
+            limited to: configuring with  CMake, fixing the root-causes of
+            {\it every} compiler warning, static analysis, automatic code
             formatting, and continuous integration using multiple compilers and
             dependency versions / implementations.
 
@@ -311,7 +318,7 @@
             tools, and modern parallel programming models for exascale systems.
 
         \item
-            Received professional certification as Certified Scrum Master (CSM)
+            Achieved professional certification as Certified Scrum Master (CSM)
             from Scrum Alliance.
     \end{resumeItemize}
 
@@ -337,36 +344,38 @@
     \begin{resumeItemize}
         \item
             Developed theory and computational techniques for including
-            magnetostrictive effects in non-uniformly-magnetized 3d
-            finite-element micromagnetic models with free boundaries.
-            This was implemented in our group's micromagnetics code, MERRILL,
-            with results presented at conferences, and published in a thesis.
+            magnetostrictive and multi-phase effects in non-uniformly-magnetized
+            3D finite-element micromagnetic models with free boundaries.  This
+            was implemented in our group's Fortran-based micromagnetics code,
+            MERRILL, with results presented at conferences, and published in a
+            thesis.
 
         \item
-            Developed a meshing application, MEshRRILL, leveraging the CGAL
-            library to generate unstructured meshes for micromagnetic
+            Developed a meshing application in C\verb!++!, MEshRRILL, leveraging
+            the CGAL library to generate unstructured meshes for micromagnetic
             simulations.
-            The application generates a number of pre-defined shapes, typical
-            for ferromagnetic crystals, but also generates reconstructions of
-            geometries from tomography images.
+            The application generates meshes for a number of pre-defined shapes,
+            typical for ferromagnetic crystals, but also generates
+            surface reconstructions of geometries from coarse tomography images.
             Data generated by this software has been used in publications.
 
         \item
-            Developed software, HoloMag, to produce simulated electron
-            holography data from our micromagnetic models.
+            Developed software, HoloMag, written in C\verb!++! and Python to
+            produce simulated electron holography data from micromagnetic
+            models.
             This is provided as a ParaView plugin and has been optimized to
             produce holography results in near real-time, allowing researchers
-            to develop an intuition for how 3d magnetizations effect the 2d
+            to develop an intuition for how 3D magnetizations effect the 2D
             holography images.
             Data generated by this software has been used in publications.
 
         \item
-            Developed workflows for compiling software for reliable distribution.
-            This included building as-static-as-possible versions of programs like MERRILL,
-            along with shared-library version of MEshRRILL with all dependencies
-            installed in a subfolder and RPATHs set appropriately, so it could
-            easily be used and linked as a C++ library to mesh complex
-            user-defined geometries.
+            Developed workflows for compiling software for reliable
+            distribution.  This included building as-static-as-possible versions
+            of programs like MERRILL, along with shared-library version of
+            MEshRRILL with all dependencies installed in a subfolder and RPATHs
+            set appropriately, so it could easily be used and linked as a C++
+            library to mesh complex user-defined geometries.
             HoloMag was also compiled to be ABI-compatible with ParaView
             binaries downloaded from the ParaView website.
     \end{resumeItemize}
@@ -391,26 +400,22 @@
 
     \begin{resumeItemize}
         \item
-            Developed browser based app leveraging Facebook's JavaScript API and
-            FBQL API to display a user's mutual friends with attendees of an
-            event.
+            Developed browser-based app leveraging Facebook's JavaScript API and
+            FBQL API to display a the mutual friends a user has with attendees
+            of an event.
             Handled events with thousands of attendees within seconds.
 
         \item
-            Analyzed ticketing system used for event, identified features
-            causing the system to slow to an unacceptable pace when the
-            user base grew large enough and presented solutions.
+            Analyzed Ruby-on-Rails event ticketing system, identifying the
+            root cause of slow-downs and failures for large user-bases.
 
         \item
             Implemented caching and distribution of content through a CDN
-            for events sites when hosting servers began straining under
-            high traffic.
+            for events sites to handle high traffic.
 
         \item
-            Researched and made recommendations on IaaS platforms,
-            deployments in cloud environments
-            and NoSQL database systems for use with apps and services being
-            developed in-house.
+            Researched and evaluated IaaS platforms, deployments in cloud
+            environments and NoSQL database systems.
     \end{resumeItemize}
 
 \end{resumeSubSectionBody}
@@ -431,22 +436,23 @@
     ellipsoidal plasma mirrors (EPM) for focusing lasers.
 
     \begin{resumeItemize}
-        \item
-            Participated in a laser-plasma ion acceleration experiment.
+        % \item
+        %     Assisted with laser-plasma ion acceleration experiment.
 
         \item
-            Developed numerical model of an experimental setup probing EPM
-            alignment errors using the Zemax optics software.
+            Developed numerical model of an EPM focusing a laser using the Zemax
+            optics software. Assembled an equivalent physical experimental setup
+            to replicate results.
 
         \item
-            Investigated alignment errors due to geometric effects using ray
-            tracing models, and compared them to diffractive errors by using
-            wave front propagation models.
+            Investigated EPM alignment errors due to geometric effects and
+            diffractive effective effects using ray tracing and
+            wave-front-propagation models respectively.
 
-        \item
-            Set up an equivalent physical model of the experimental setup using
-            a Helium-Neon laser to experimentally replicate the predictions of
-            the model.
+        %\item
+        %    Set up an equivalent physical experiment of the numerical
+        %    experiments using a Helium-Neon laser to experimentally replicate
+        %    the predictions of the models.
 
         \item
             Demonstrated the classes of alignment errors the EPM was and was not
@@ -570,53 +576,53 @@
 
 
 % \resumeSection{Awards}
-% 
-% 
+%
+%
 % %
 % % Awards
 % %
 % \begin{resumeSubSectionBody}
-% 
+%
 %     \begin{resumeItemize}
 %         \setlength\itemsep{0em}
 %         \setlength\parskip{0em}
 %         \item
 %             % TODO: Find out actual name of this.
 %             Winner Castle Meeting 2016 Outstanding Participation.
-% 
+%
 %         \item
 %             Creer Fund recipient 2016.
-% 
+%
 %         \item
 %             Winner Geosciences PGR Conference 2013 Best Presentation.
-% 
+%
 %         \item
 %             Included on TCD Dean of Students' Roll of Honour 2011.
-% 
+%
 %         \item
 %             Three TCD book prizes for achieving 1st class honors grade in
 %             years 1-3.
-% 
+%
 %         \item
 %             Awarded an Entrance Exhibition to Trinity College Dublin
 %             based on outstanding achievement in Leaving Certificate
 %             examination.
-% 
+%
 %         \item
 %             Received full college scholarship ``Scol\'aireacht Neamhteoranta''
 %             for outstanding results in Irish language exams in the
 %             Leaving Certificate.
-% 
+%
 %         \item
 %             Won battle of the bands, Col\'aiste Eoin, 2008 as singer and bassist
 %             of heavy metal band Capulus. \\
 %             (Demo available upon request)
-% 
+%
 %         %\item
 %         %    I think Paddy is a pretty cool guy.
 %         %    Eh codes warez and doesn't afraid of anything.
 %     \end{resumeItemize}
-% 
+%
 % \end{resumeSubSectionBody}
 
 
