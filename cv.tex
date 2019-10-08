@@ -109,7 +109,7 @@
 
 \newenvironment{resumeSubSectionBody}{
     \par
-    \vspace{-0.2\parskip}
+    \vspace{-0.4\parskip}
     \begin{small}
     \par
 } {
@@ -162,39 +162,52 @@
 %
 \begin{resumeSubSectionBody}
 
-    My preferred language is C\verb!++!, and my preferred application domain is
-    anything I haven't done yet.
-    Ideally, something that's never been done.
-    I have a great interest in high performance computing, computational
-    physics, and build systems.
-    I like to keep up to date with modern programming techniques and paradigms
-    whenever possible.
+    I specialize in high performance computing (HPC), and computational physics.
+    I have extensive experience in using co-processors, primarily Nvidia GPUs,
+    and have a keen interest to further explore the accellerator landscape.
 
-    All the technologies listed here I have used extensively in personal
-    projects, or in a professional context.
+    I have a strong interest in writing high quality software: using modern
+    tools, techniques, and design patterns.
+    I'm particularly interested in writing high-performance tools and libraries
+    which address bottlenecks in existing systems, or enable novel avenues of
+    research \& development, enabling the development of high-quality software
+    for others.
+
+    I have a strong background in C\verb!++!, and consider it my ``goto''
+    language.
+    However, I have developed and worked on libraries and applications in a wide
+    number of languages, most significantly in Fortran, C, and Python.
+    The following is a more extensive (but not exhaustive!) list of languages,
+    libraries and tools I've used significantly in projects
 
     \begin{resumeDescription}
-        \item{\bf Expertise:} \\
+        \item{\bf Languages \& Programming Models:}
             % Languages
-            C\verb!++!, C, Fortran 90, Python, Bash,
-            \\
+            C\verb!++!, C, Fortran 90, Python, Bash
+
+        \item{\bf Parallel Programming:}
             MPI, MPI-IO, OpenMP, CUDA C/C\verb!++!, CUDA Fortran,
-            OpenACC, UPC, Coarray Fortran,
-            \\
+            OpenACC, UPC, Coarray Fortran
+
+        \item{\bf Compilers \& Build Tooling:}
             % Compilers & build tools
-            CMake, Autotools, GCC, Clang, MSVC, PGI,
-            Linux \& macOS ELF / Mach-O toolchains,
-            \\
+            CMake, Autotools, GCC, Clang, nvcc, MSVC, PGI,
+            Linux \& macOS toolchains
+
+        \item{\bf Scientific Software:}
             % Libraries
             SWIG, FEniCS, CGAL, VTK, ParaView,
-            Mathematica, MATLAB, Zemax, Gnuplot, LaTeX,
-            \\
-            PulseAudio, GStreamer, SBC, Bluetooth,
-            \\
+            Mathematica, MATLAB, Zemax, Gnuplot, LaTeX
+
+        \item{\bf Audio Stacks:}
+            PulseAudio, GStreamer, SBC, Bluetooth
+
+        \item{\bf Web Development:}
             % Web stuff
             HTML/CSS, JavaScript, PHP, Ruby,
-            Ruby On Rails, Node.js, jQuery,
-            \\
+            Ruby On Rails, Node.js, jQuery
+
+        \item{\bf Databases:}
             % Databases
             SQL, CouchDB, MongoDB, Redis, Neo4j
     \end{resumeDescription}
@@ -256,14 +269,23 @@
         \item
             Lead and contributed to an AI optimization \& predictive
             performance modelling project in the Machine Translation domain for
-            an Irish SME using Nvidia GPUs on Microsoft Azure.
+            United Language Group using Nvidia GPUs on Microsoft Azure.
+
+        \item
+            Providing mentorship to post-docs and PhDs in the centre, along with
+            undergraduates through internship programmes.
 
         \item
             Assessing and implementing internal policies and procedures to
-            foster and develop critical skills and experience for our
+            foster and develop critical skills and experience in our
             computational scientists.
             Contributing to development of scalable organizational structures in
-            the centre to allow for the centre to expand.
+            the centre to allow for future expansion.
+
+        \item
+            Contributing to technical work needed by the Project Management
+            Organization, ensuring the smooth operation of our project
+            management software.
 
         \item
             Developing best-practice guidelines, FAQs, and teaching material for
@@ -276,6 +298,7 @@
     \end{resumeItemize}
 \end{resumeSubSectionBody}
 
+\newpage
 \begin{resumeSubSectionHeader}
 
     \textbf{Irish Centre for High-End Computing (ICHEC)} & Dublin, Ireland \\
@@ -400,14 +423,15 @@
 
     \begin{resumeItemize}
         \item
-            Developed browser-based app leveraging Facebook's JavaScript API and
-            FBQL API to display a the mutual friends a user has with attendees
-            of an event.
-            Handled events with thousands of attendees within seconds.
+            Developed browser-based apps leveraging Facebook's JavaScript API
+            and FBQL API.
+            %to display a the mutual friends a user has with attendees
+            %of an event.
+            %Handled events with thousands of attendees within seconds.
 
         \item
-            Analyzed Ruby-on-Rails event ticketing system, identifying the
-            root cause of slow-downs and failures for large user-bases.
+            Identified and eliminated bottlenecks in Ruby-on-Rails
+            ticketing system for large events with many users.
 
         \item
             Implemented caching and distribution of content through a CDN
@@ -432,32 +456,35 @@
 \end{resumeSubSectionHeader}
 \begin{resumeSubSectionBody}
 
-    Investigated alignment errors encountered by experiments using
-    ellipsoidal plasma mirrors (EPM) for focusing lasers.
+    Identified sources of alignment errors encountered by prior experiments
+    using ellipsoidal plasma mirrors (EPM) for focusing lasers, by developing a
+    twinned numerical and physical experiment.
+    Identified which classes of misalignment the system was sensitive to,
+    informing future alignment procedures.
 
-    \begin{resumeItemize}
-        % \item
-        %     Assisted with laser-plasma ion acceleration experiment.
+    %\begin{resumeItemize}
+    %    % \item
+    %    %     Assisted with laser-plasma ion acceleration experiment.
 
-        \item
-            Developed numerical model of an EPM focusing a laser using the Zemax
-            optics software. Assembled an equivalent physical experimental setup
-            to replicate results.
+    %    \item
+    %        Developed numerical model of an EPM focusing a laser using the Zemax
+    %        optics software. Assembled an equivalent physical experimental setup
+    %        to replicate results.
 
-        \item
-            Investigated EPM alignment errors due to geometric effects and
-            diffractive effective effects using ray tracing and
-            wave-front-propagation models respectively.
+    %    \item
+    %        Investigated EPM alignment errors due to geometric effects and
+    %        diffractive effective effects using ray tracing and
+    %        wave-front-propagation models respectively.
 
-        %\item
-        %    Set up an equivalent physical experiment of the numerical
-        %    experiments using a Helium-Neon laser to experimentally replicate
-        %    the predictions of the models.
+    %    %\item
+    %    %    Set up an equivalent physical experiment of the numerical
+    %    %    experiments using a Helium-Neon laser to experimentally replicate
+    %    %    the predictions of the models.
 
-        \item
-            Demonstrated the classes of alignment errors the EPM was and was not
-            sensitive to, informing alignment procedures in future experiments.
-    \end{resumeItemize}
+    %    \item
+    %        Demonstrated the classes of alignment errors the EPM was and was not
+    %        sensitive to, informing alignment procedures in future experiments.
+    %\end{resumeItemize}
 
 \end{resumeSubSectionBody}
 
